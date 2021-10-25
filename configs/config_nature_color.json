@@ -1,0 +1,53 @@
+{
+
+    "dataset": {
+        "num_parallel_calls": -1,
+        "Phi_datapath" : "./data/nature_color/sampling_matrix",
+        "Qinit_datapath" : "./data/nature_color/sampling_matrix",        
+        "valid_datapath" : "./data/nature_color/test_images",
+        "valid_data" : "CelebA HQ",
+        "CS_ratio": 10,
+        "IMG_Patch": 33,
+        "inputSNR": "inf"
+    },
+
+    "cnn_model": {
+        "network": "DnCNN",
+        "net_mode": 2
+    },
+
+    "pnp(AR)": {
+
+        "numIter":350,
+        "gamma_inti": 0.7,
+        "tau": 0.794818850572077,
+        "alpha":0.1,
+        "cs" : 10,
+        "sigma":0,
+        "model_path" : "./model_zoo/color_AR_L12" 
+  
+    },
+
+    "pnp(denoising)": {
+
+        "numIter":350,
+        "gamma_inti": 1.3,
+        "tau": 0.556119746032523,
+        "alpha":0.1,
+        "sigma":2,
+        "model_path" : "./model_zoo/color_denoisers_L12" 
+
+    },
+
+    "red(denoising)": {
+ 
+        "numIter":350,
+        "gamma_inti": 1.3,
+        "tau": 0.0196133640598950,
+        "alpha":1,
+        "sigma":4,
+        "model_path" : "./model_zoo/color_denoisers_L12"         
+
+    } 
+
+}

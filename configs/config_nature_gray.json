@@ -1,0 +1,51 @@
+{
+
+    "dataset": {
+        "num_parallel_calls": -1,
+        "Phi_datapath" : "./data/nature_gray/sampling_matrix",
+        "Qinit_datapath" : "./data/nature_gray/sampling_matrix",        
+        "valid_datapath" : "./data/nature_gray/test_images",
+        "valid_data" : "Set11",
+        "CS_ratio": 10,
+        "IMG_Patch": 33,
+        "inputSNR": "inf"
+    },
+
+    "cnn_model": {
+        "network": "DnCNN",
+        "net_mode": 2
+    },
+
+    "pnp(AR)": {
+
+        "numIter":3000,
+        "gamma_inti": 1.5,
+        "tau_inti": 1,
+        "alpha":0.5,
+        "cs" : 10,
+        "sigma":0,
+        "model_path" : "./model_zoo/gray_AR_L12" 
+  
+    },
+
+    "pnp(denoising)": {
+
+        "numIter":3000,
+        "gamma_inti": 1.2,
+        "tau_inti": 1,
+        "alpha":0.2,
+        "sigma":5,
+        "model_path" : "./model_zoo/gray_denoisers_L12_sp1" 
+    },
+
+    "red(denoising)": {
+ 
+        "numIter":3000,
+        "gamma_inti": 2,
+        "tau_inti": 1,
+        "alpha":1,
+        "sigma":5,
+        "model_path" : "./model_zoo/gray_denoisers_L12_sp1"         
+    } 
+
+}
