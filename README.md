@@ -11,7 +11,7 @@ tqdm
 python 3.6
 scipy 1.2.1 or lower
 numpy v1.17 or lower
-pytorch 1.14 or lower
+pytorch 1.7 or lower
 
 It is better to use Conda for installation of all dependecies.
 
